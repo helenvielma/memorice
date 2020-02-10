@@ -59,7 +59,8 @@ body {
 
 /* Determinamos los grados de la rotación de la tarjeta */
 
-.caja.flipped {
+.caja:hover,
+.caja.flip {
     -webkit-transform: rotateY( 180deg);
     -moz-transform: rotateY( 180deg);
     -o-transform: rotateY( 180deg);
@@ -79,11 +80,11 @@ body {
     backface-visibility: hidden;
 }
 
-.card .front {
+.caja .front {
     background-color: blue;
 }
 
-.card .back {
+.caja .back {
     background-color: red;
     /* Animacion para rotar la cara trasera */
     -webkit-transform: rotateY( 180deg);
