@@ -93,6 +93,11 @@ body {
     transform: rotateY( 180deg);
 }
 
+img {
+    width: 100px;
+    height: 100px;
+}
+
 .botones {
     text-align: center;
 }
