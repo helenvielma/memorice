@@ -1,18 +1,10 @@
-/*Formateo Minimalista*/
-
 * {
     outline: 0;
     padding: 0;
     margin: 0;
     border: 0;
+    outline: 1px dashed rgb(72, 255, 0);
 }
-
-* {
-    outline: 1px dotted green;
-}
-
-
-/*Reescritura de CSS*/
 
 html,
 body {
@@ -45,52 +37,54 @@ body {
 
 .caja {
     box-sizing: border-box;
-    /* Determinamos la trasicion de los efectos */
+    /* Determinamos la trasicion de los efectos 
     -webkit-transition: -webkit-transform 0.4s;
     -moz-transition: -moz-transform 0.4s;
     -o-transition: -o-transform 0.4s;
-    transition: transform 0.4s;
+    transition: transform 0.4s; 
+    */
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    
 }
 
 
 /* Determinamos los grados de la rotación de la tarjeta */
 
-.caja:hover,
-.caja.flip {
-    -webkit-transform: rotateY( 180deg);
-    -moz-transform: rotateY( 180deg);
-    -o-transform: rotateY( 180deg);
-    transform: rotateY( 180deg);
-}
-
-.caja .front,
-.caja .back {
+.caja .front ,
+.caja .back{
     display: block;
     height: 100%;
     width: 100%;
     position: absolute;
+
     /*visibility hidden para esconder una cara mientras se muestra la otra */
+    
+    /*
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -o-backface-visibility: hidden;
     backface-visibility: hidden;
+    */
 }
+
+
 
 .caja .front {
-    background-color: blue;
+    background-color: rgb(255, 0, 0);
 }
 
+
 .caja .back {
-    background-color: red;
-    /* Animacion para rotar la cara trasera */
+    background-color: rgb(0, 26, 255);
+    /* Animacion para rotar la cara trasera 
     -webkit-transform: rotateY( 180deg);
     -moz-transform: rotateY( 180deg);
     -o-transform: rotateY( 180deg);
     transform: rotateY( 180deg);
+    */
 }
 
 img {
@@ -100,4 +94,8 @@ img {
 
 .botones {
     text-align: center;
+}
+
+.win{
+    background-color: green;
 }

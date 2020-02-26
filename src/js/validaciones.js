@@ -18,7 +18,38 @@ function cargarImagen() {
     var i = 0;
     while (i < pokemon.length) {
         var aleatorio = pokemon[i];
-        document.getElementById(i).innerHTML = "<img src=src/img/" + aleatorio + ".png>";
+        document.getElementById(i).innerHTML = "<img src=src/img/" + aleatorio + ".png name="+aleatorio+ ">";
         i++;
     }
 }
+
+function ImagenListeilor() {
+    
+    cargarImagen();
+    $("img").fadeOut("slow");
+    $('#inicio').prop("disabled",true)
+}
+
+
+$(Document).ready(function(){
+    
+
+$("div.back").click(function(){
+
+
+
+    $(this).toggleClass("front back");
+
+    $(this).find("img").toggle();
+
+    
+    
+
+    });
+
+
+
+
+    
+
+});
